@@ -16,7 +16,7 @@ reviewsRouter.get("/", async (req, res, next) => {
   try {
     const reviews = await ReviewsModel.findAll({
       include: [
-        { model: UsersModel, attributes: ["firstName", "lastName"] },
+        { model: UsersModel, attributes: ["firstName", "lastName", "id"] },
         // to exclude from the result the junction table rows --> through: { attributes: [] }
       ],
     });

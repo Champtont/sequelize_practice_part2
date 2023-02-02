@@ -19,7 +19,7 @@ const UsersModel = sequelize.define(
       allowNull: false,
     },
     country: {
-      type: DataTypes.STRING(2),
+      type: DataTypes.STRING,
       allowNull: false,
     },
   }

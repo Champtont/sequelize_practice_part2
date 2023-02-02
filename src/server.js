@@ -25,7 +25,7 @@ server.use(express.json());
 server.use("/products", productsRouter);
 server.use("/users", usersRouter);
 server.use("/reviews", reviewsRouter);
-server.use("categories", categoriesRouter);
+//server.use("categories", categoriesRouter);
 
 // ******************************* ERROR HANDLERS **************************************
 server.use(badRequestErrorHandler);

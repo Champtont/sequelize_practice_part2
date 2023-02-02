@@ -41,13 +41,13 @@ ProductsModel.hasMany(ReviewsModel, { foreignKey: { allowNull: false } });
 ReviewsModel.belongsTo(ProductsModel);
 
 // Many to many relationship
-ProductsModel.belongsToMany(CategoriesModel, {
+/*ProductsModel.belongsToMany(CategoriesModel, {
   through: ProductsCategoriesModel,
   foreignKey: { name: "productId", allowNull: false },
 });
 CategoriesModel.belongsToMany(ProductsModel, {
   through: ProductsCategoriesModel,
   foreignKey: { name: "categoryId", allowNull: false },
-});
+});*/
 
 export default ProductsModel;

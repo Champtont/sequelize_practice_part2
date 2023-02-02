@@ -1,4 +1,4 @@
-import { DataTypes, SMALLINT } from "sequelize";
+import { DataTypes, INTEGER, SMALLINT } from "sequelize";
 import sequelize from "../../db.js";
 
 const ReviewsModel = sequelize.define("review", {
@@ -14,9 +14,6 @@ const ReviewsModel = sequelize.define("review", {
   rating: {
     type: DataTypes.SMALLINT,
     allowNull: false,
-    validate: {
-      is: SMALLINT > 0 && SMALLINT <= 5,
-    },
   },
   content: {
     type: DataTypes.TEXT,

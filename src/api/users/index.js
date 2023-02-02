@@ -22,7 +22,7 @@ usersRouter.get("/", async (req, res, next) => {
       query.firstName = { [Op.iLike]: `${req.query.firstName}%` };
     const users = await UsersModel.findAll({
       where: { ...query },
-      attributes: ["firstName", "lastName"],
+      attributes: ["firstName", "lastName", "id"],
     });
     res.send(users);
   } catch (error) {
