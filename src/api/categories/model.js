@@ -10,6 +10,7 @@ const CategoriesModel = sequelize.define("category", {
   name: {
     type: DataTypes.String,
     allowNull: false,
+    unique: true,
   },
 });
 

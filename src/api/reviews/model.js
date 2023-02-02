@@ -1,4 +1,4 @@
-import { DataTypes } from "sequelize";
+import { DataTypes, SMALLINT } from "sequelize";
 import sequelize from "../../db.js";
 
 const ReviewsModel = sequelize.define("review", {
@@ -7,19 +7,18 @@ const ReviewsModel = sequelize.define("review", {
     primaryKey: true,
     defaultValue: DataTypes.UUIDV4,
   },
-  firstName: {
+  title: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  lastName: {
-    type: DataTypes.STRING,
+  rating: {
+    type: DataTypes.SMALLINT,
     allowNull: false,
+    validate: {
+      is: SMALLINT > 0 && SMALLINT <= 5,
+    },
   },
-  price: {
-    type: DataTypes.FLOAT,
-    allowNull: false,
-  },
-  review: {
+  content: {
     type: DataTypes.TEXT,
     allowNull: false,
   },
