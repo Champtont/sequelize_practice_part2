@@ -1,5 +1,5 @@
-import { DataType } from "sequelize";
-import sequelize from "../../db";
+import { DataTypes } from "sequelize";
+import sequelize from "../../db.js";
 
 const CategoriesModel = sequelize.define("category", {
   categoryId: {
@@ -8,7 +8,7 @@ const CategoriesModel = sequelize.define("category", {
     defaultValue: DataTypes.UUIDV4,
   },
   name: {
-    type: DataTypes.String,
+    type: DataTypes.STRING,
     allowNull: false,
     unique: true,
   },

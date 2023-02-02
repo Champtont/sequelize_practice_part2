@@ -2,6 +2,7 @@ import { DataTypes } from "sequelize";
 import sequelize from "../../db.js";
 import CategoriesModel from "../categories/model.js";
 import ProductsCategoriesModel from "./productsCategoriesModel.js";
+import ReviewsModel from "../reviews/model.js";
 
 const ProductsModel = sequelize.define(
   "product",
